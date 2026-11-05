@@ -1,22 +1,6 @@
-import random
+print("Hello from Python Application")
 
-def guess_the_number():
-    number = random.randint(1, 100)
-    attempts = 0
+name = "VVCE"
 
-    print("Welcome to Guess the Number!")
-    print("Guess a number between 1 and 100.")
-
-    while True:
-        guess = int(input("Enter your guess: "))
-        attempts += 1
-
-        if guess < number:
-            print("Too low! Try again.")
-        elif guess > number:
-            print("Too high! Try again.")
-        else:
-            print(f"Congratulations! You guessed it in {attempts} attempts.")
-            break
-
-guess_the_number()
+print("Welcome to", name)
+print("Application executed successfully")
