@@ -2,3 +2,154 @@
 	"firstname":"VISH",
 	"lastname":"BN"
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.
+PS C:\Users\prajwal bn\Desktop\dev1.1> git init
+Initialized empty Git repository in C:/Users/prajwal bn/Desktop/dev1.1/.git/
+PS C:\Users\prajwal bn\Desktop\dev1.1> git add .
+PS C:\Users\prajwal bn\Desktop\dev1.1> git commit -m "initial commit"
+[master (root-commit) 76a17c4] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text.txt
+PS C:\Users\prajwal bn\Desktop\dev1.1> git branch b1
+PS C:\Users\prajwal bn\Desktop\dev1.1> git switch b1
+Switched to branch 'b1'
+PS C:\Users\prajwal bn\Desktop\dev1.1> git add .
+PS C:\Users\prajwal bn\Desktop\dev1.1> git commit -m "b1"
+[b1 a4e0417] b1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\prajwal bn\Desktop\dev1.1> git switch master
+Switched to branch 'master'
+PS C:\Users\prajwal bn\Desktop\dev1.1> git branch b2
+PS C:\Users\prajwal bn\Desktop\dev1.1> git switch b2
+Switched to branch 'b2'
+PS C:\Users\prajwal bn\Desktop\dev1.1> git add .
+PS C:\Users\prajwal bn\Desktop\dev1.1> git commit -m "b2"
+[b2 71f928b] b2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\prajwal bn\Desktop\dev1.1> git switch b1
+Switched to branch 'b1'
+PS C:\Users\prajwal bn\Desktop\dev1.1> git switch master
+Switched to branch 'master'
+PS C:\Users\prajwal bn\Desktop\dev1.1> git merge b1
+Updating 76a17c4..a4e0417
+Fast-forward
+ text.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\prajwal bn\Desktop\dev1.1> git merge b2
+Auto-merging text.txt
+CONFLICT (content): Merge conflict in text.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\prajwal bn\Desktop\dev1.1> git add .
+PS C:\Users\prajwal bn\Desktop\dev1.1> git commit -m "conflict resolved"
+[master 59eee78] conflict resolved
+PS C:\Users\prajwal bn\Desktop\dev1.1> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\prajwal bn\Desktop\dev1.1>  is this correct for this question ? 
+
+2.
+
+# 1. Initialize repository
+git init
+git branch -M master
+
+# 2. Configure Git
+git config user.name "Vishrutha BN"
+git config user.email "your_email@gmail.com"
+
+# 3. Create Python file
+Set-Content text.py 'print("Hello World")'
+
+# 4. Initial commit
+git add .
+git commit -m "initial commit"
+
+# 5. Create branch1
+git checkout -b branch1
+
+# 6. Modify file in branch1
+Set-Content text.py 'print("Hello from branch1")'
+git add .
+git commit -m "branch1 changes"
+
+# 7. Switch to master
+git checkout master
+
+# 8. Modify the same file in master
+Set-Content text.py 'print("Hello from master")'
+git add .
+git commit -m "master changes"
+
+# 9. Merge branch1 into master
+git merge branch1
+
+# 10. Resolve conflict manually
+Set-Content text.py 'print("Hello from master and branch1")'
+
+# 11. Commit conflict resolution
+git add .
+git commit -m "conflict resolved"
+
+# 12. Check final status
+git status
+
+# 13. Display commit history
+git log --oneline --graph --all
