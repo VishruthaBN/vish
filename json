@@ -157,4 +157,18 @@ git commit -m "conflict resolved"
 git status
 
 # 13. Display commit history
-git log --oneline --graph --all
+git log --oneline --graph --all 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
