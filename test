@@ -17,6 +17,245 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Space | My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #a78bfa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a78bfa;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: radial-gradient(circle at top, #312e81, #0f172a 65%);
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #a78bfa;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #8b5cf6;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7c3aed;
+            transform: translateY(-3px);
+        }
+
+        .projects {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: left;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #a78bfa;
+        }
+
+        .card h3 {
+            color: #c4b5fd;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .contact {
+            padding: 65px 20px;
+            text-align: center;
+            background: #1e293b;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">CreativeSpace.</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Design. Create. <span>Innovate.</span></h1>
+
+        <p>
+            Welcome to my creative space! I love exploring technology,
+            designing beautiful experiences and building ideas into reality.
+        </p>
+
+        <button class="btn" onclick="showMessage()">
+            Explore My Work
+        </button>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>What I Do</h2>
+
+        <div class="project-container">
+
+            <div class="card">
+                <h3>💻 Web Development</h3>
+                <p>
+                    Creating responsive and interactive websites
+                    using HTML, CSS and JavaScript.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 UI/UX Design</h3>
+                <p>
+                    Designing clean, modern and user-friendly
+                    digital experiences.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Innovation</h3>
+                <p>
+                    Exploring new technologies and turning
+                    creative ideas into useful projects.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's Connect!</h2>
+        <p>Great ideas begin with a simple conversation.</p>
+        <button class="btn" onclick="showMessage()">
+            Say Hello
+        </button>
+    </section>
+
+    <footer>
+        <p>© 2026 CreativeSpace. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("Hello! Thanks for visiting my website. 🚀");
+        }
+    </script>
+
+</body>
+</html>
+
 
 
 
