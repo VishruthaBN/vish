@@ -1,0 +1,21 @@
+docker pull nginx
+docker images
+docker run -d -p 9091:80 nginx
+docker ps
+
+
+FROM httpd:latest
+COPY index.html usr/local/apache2/htdocs 
+
+
+docker build -t resume2:1.0 .
+docker run -d --name container2 -p 9090:80 resume2:1.0 
+
+copy url image
+
+
+docker tag [id] vishruthabn/resume2:1.0
+docker push vishruthabn/resume2:1.0 
+
+
+docker run -d -p 9080:80 vinyasm15/resume2:1.0
